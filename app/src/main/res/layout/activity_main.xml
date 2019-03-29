@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" tools:layout_editor_absoluteY="25dp" android:minHeight="198dp">
+
+    <Button
+            android:text="Calcular"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content" android:id="@+id/butaoCalcular"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+            android:layout_marginBottom="16dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="AcaoButao"/>
+    <TextView
+            android:text="Modelo do Automóvel:"
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:id="@+id/textView2"
+            android:textSize="30sp" android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp" android:layout_marginEnd="21dp" android:layout_marginRight="21dp"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" android:layout_marginBottom="11dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp" android:layout_marginEnd="21dp" android:layout_marginRight="21dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" android:id="@+id/inputModeloAuto"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+            android:text="Distância (Km):"
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:id="@+id/textView3"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp" android:layout_marginEnd="22dp" android:layout_marginRight="22dp"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginBottom="14dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp" android:layout_marginEnd="22dp" android:layout_marginRight="22dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" android:id="@+id/inputDistanciaKm"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+            android:text="Potência do Motor:"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textView4" android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp" android:layout_marginEnd="23dp" android:layout_marginRight="23dp"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" android:layout_marginBottom="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp" android:layout_marginEnd="22dp" android:layout_marginRight="22dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" android:id="@+id/inputPotenciaMotor"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+            android:text="Valor do Litro da Gasolina:"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textView5" android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp" android:layout_marginEnd="24dp" android:layout_marginRight="24dp"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" android:layout_marginBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/butaoCalcular"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp" android:layout_marginEnd="24dp" android:layout_marginRight="24dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" android:id="@+id/inputValorGasolina"/>
+    </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>
