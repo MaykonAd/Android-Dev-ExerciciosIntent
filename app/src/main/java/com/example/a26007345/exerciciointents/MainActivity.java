@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText potenciaMot;
     private TextInputEditText litroGaso;
     private double resultado;
-    private TextView text;
+    //private TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,22 +33,30 @@ public class MainActivity extends AppCompatActivity {
         double litroValor = Double.parseDouble(litroGaso.getText().toString());
         double mult;
 
-        if(pontecia > 1.9){
-            mult = 7.75;
-        }else if(pontecia > 1.4 && pontecia <= 1.9 ){
+        if(pontecia <= 1.0){
+            mult = 13;
+        }else if(pontecia > 1.0 && pontecia < 1.4 ){
+            mult = 11;
+        }else if(pontecia > 1.4 && pontecia < 1.9){
             mult = 9.5;
-        }else if(pontecia > 1.0 && pontecia <= 1.4){
-            mult = 11.0;
         }else{
-            mult = 13.0;
+            mult = 7.75;
         }
 
-        //resultado = (mult/distancia)*litroValor;
-       // DecimalFormat d = new DecimalForm
-        //d.format(resultado);
+        resultado = (mult/distancia)*litroValor;
+        System.out.println(resultado);
+        System.out.println(distancia); System.out.println(litroValor);
+        DecimalFormat d = new DecimalFormat("00.00");
+        String res = d.format(resultado);
+
 
         Intent i = new Intent(this,Main2Activity.class);
-        i.putExtra("Resultado",resultado);
+        i.putExtra("modeloAut",modeloAut.getText().toString());
+        i.putExtra("potenciaMot",potenciaMot.getText().toString());
+        i.putExtra("distanciaKm",distanciaKm.getText().toString());
+        i.putExtra("litroGaso",litroGaso.getText().toString());
+        i.putExtra("Resultado",res);
+        System.out.println(res);
         startActivity(i);
     }
 }
