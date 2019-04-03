@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
             mult = 7.75;
         }
 
-        resultado = (mult/distancia)*litroValor;
-        System.out.println(resultado);
-        System.out.println(distancia); System.out.println(litroValor);
+        resultado = (distancia/mult)*litroValor;
         DecimalFormat d = new DecimalFormat("00.00");
         String res = d.format(resultado);
 
