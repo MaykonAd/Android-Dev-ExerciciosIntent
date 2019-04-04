@@ -5,15 +5,16 @@ import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
-    private TextInputEditText modeloAut;
-    private TextInputEditText distanciaKm;
-    private TextInputEditText potenciaMot;
-    private TextInputEditText litroGaso;
+    private EditText modeloAut;
+    private EditText distanciaKm;
+    private EditText potenciaMot;
+    private EditText litroGaso;
     private double resultado;
     //private TextView text;
 

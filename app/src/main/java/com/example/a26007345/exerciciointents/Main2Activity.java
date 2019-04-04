@@ -25,7 +25,7 @@ public class Main2Activity extends AppCompatActivity {
         String distancia = dados.getString("distanciaKm");
         String litrovalor = dados.getString("litroGaso");
         String result = dados.getString("Resultado");
-        texto.setText(modelo+ " " + potencia + " gasta " + result + " para percorrer "+distancia+" Km " + litrovalor+"Valor");
+        texto.setText(modelo+ " " + potencia + " gasta " + result + " para percorrer "+distancia+" Km " + litrovalor+"Valor da gasolina");
 
     }
     public void compartilhar(View tf){
